@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 1000px;
+        height: 1000px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+    <script>
+      var a = [1001, 101, 304];
+      function check(a) {
+        var sum = 0;
+        var number = a;
+        while (number > 0) {
+          var x = number % 10;
+          sum = sum * 10 + x;
+          number = Math.floor(number / 10);
+        }
+        console.log("sum is", sum);
+        return sum;
+      }
+      for (let i = 0; i < a.length; i++) {
+        var reverse = check(a[i]);
+        if (reverse !== a[i]) {
+          a.splice(i, 1);
+        }
+      }
+      console.log(a);
+    </script>
+  </body>
+</html>
