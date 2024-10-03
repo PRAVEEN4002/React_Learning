@@ -16,7 +16,7 @@ function FocusInput() {
         type="text"
         ref={buttonref}
         onClick={() => {
-          console.log("clicked");
+          alert("clicked");
         }}
       >
         click
